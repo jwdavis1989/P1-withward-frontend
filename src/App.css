@@ -1,4 +1,9 @@
-.App {
+body {
+  background-color: #282c34;
+  color: #fff;
+}
+
+#login-menu {
   text-align: center;
 }
 
@@ -35,4 +40,82 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+/* Navbar Styling */
+#navbar {
+  background: #333;
+  color: #fff;
+  overflow: auto;
+  width: 100%;
+}
+
+#navbar a {
+  color: #fff;
+  text-decoration: none;
+}
+
+#navbar .logo {
+  float: left;
+  padding-top: 20px;
+  padding-left: 20px;
+}
+
+#navbar ul {
+  float: right;
+  list-style: none;
+}
+
+#navbar ul li {
+  float: left;
+}
+
+/* a by default is what we call an inline element. You can't really change
+the margin or padding of inline elements directly, so we change a to a block type element instead */
+#navbar ul li a {
+  display: block;
+  text-align: center;
+  padding: 20px;
+}
+
+#navbar ul li a:hover{
+  background: #444;
+  color:orange;
+}
+
+#withward-logo {
+  width: 20%;
+  height: 20%;
+}
+
+/* Button Styling */
+.btn {
+  display: inline-block;
+  font-size: 18px;
+  color: #fff;
+  background: #000;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+/* Primary App Page Styling */
+#mainDiv {
+  background: url('./Resources/Images/forest_gate_background.png') no-repeat center center;
+  background-size: 100%;
+  min-height:80%;
+  height: 600px;
+}
+
+/* Login Page Render */
+#login-menu {
+  text-align: center;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.6);
+  width: 25%;
+  margin-top: 3%;
+  margin-left: 10%;
+  padding: 50px;
+  border-radius: 20px;
 }
