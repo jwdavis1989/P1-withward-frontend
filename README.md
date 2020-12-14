@@ -8,6 +8,9 @@ The idea of withward means to travel with someone toward any destination. The wi
 # Getting Started
 ## Available Scripts
 
+Note: You must have a running instance of the Withward API (https://github.com/jwdavis1989/withward-java) in order to run the Withward Frontend Application.
+See the link's Readme for further instruction, thank you.
+
 In the project directory, you can run:
 
 ### `npm start`
@@ -23,6 +26,10 @@ Open a browser to begin using Withward.
 5. Admins may view all Users.
 6. Admin routes are protected.
 7. CSS Styling (Stretch Goal from Project Outline).
+
+## Demo Users
+1. Non-Admin: user2 (password: 1111)
+2. Admin: admin (password: admin)
 
 ## Feature Walkthrough
 
@@ -53,3 +60,9 @@ This is due to a minor bug that will be fixed with MVP 2.0.
 12. After clicking Admin, you are taken to a list of all User details.
 
 13. When finished, please remember to logout and have a good day.
+
+## Contributions
+
+Dan Mont-Eton - Withward Backend API: 
+(Original) https://github.com/dansirdan/withward-java
+
