@@ -12,8 +12,35 @@ In the project directory, you can run:
 
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Runs the app in the development mode.
+Open a browser to begin using Withward.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Feature Walkthrough
+
+1. A user may begin by clicking Register New Account to be taken to the Register Account page.
+Upon completion, they will be logged in and presented with their Profile name and password.
+
+2. Next, click Logout on the top navbar, which will log the user out.
+
+3. Then re-enter your new password and username to log back in.
+
+4. Now as a non-administrative user, you have access to Updating your password by clicking [Update Password] on your profile screen.
+
+5. The form prompts you to confirm your password, and only accepts the new password if it matches the confirm password text, once complete you are returned to your Profile page.
+
+6. Next, log out again and begin logging in as the user known as "user2" with a password of "1111". 
+
+7. Now, as the user user2, you may look at your list of Withlists by selecting the Withlist navbar option.
+
+8. Here you will see your current list of Withlists.
+
+9. Next logout and begin logging in as an administrator. One such admin account is called "admin" with a creative password of "admin".
+
+10. When logging in as an Admin, ensure you check the Admin checkbox to ensure you are routed through the administrative login.
+
+11. Once finished, you now have administrative access to the Admin navbar option, however if it has not appeared, simply refresh the page and it should appear.
+This is due to a minor bug that will be fixed with MVP 2.0.
+
+12. After clicking Admin, you are taken to a list of all User details.
+
+13. When finished, please remember to logout and have a good day.
