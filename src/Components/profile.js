@@ -1,5 +1,6 @@
 import React from 'react';
 import { withRouter } from "react-router-dom";
+import logo from "../Resources/Images/withward_icon_rainbow.png";
 
 class Profile extends React.Component {
     constructor(props) {
@@ -8,11 +9,12 @@ class Profile extends React.Component {
       }
     render() {
       return (
-          <div id="profile">
+          <div id="generic-menu">
+            <h1><img id='withward-logo' src={logo} alt="Withward Logo"></img>Profile</h1>
               Username: {this.state.user.username}
               <br/>
                 Password: ******
-                <br/><button id="changePassword">Update Password</button>
+                <br/><button id="changePassword" className="btn" onClick= {()=> {this.props.history.push("/passwordReset");}}>Update Password</button>
           </div>
           );
     }

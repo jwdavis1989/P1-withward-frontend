@@ -1,6 +1,7 @@
 import React from 'react';
 import { withRouter } from "react-router-dom";
 import axios from 'axios';
+import logo from "../Resources/Images/withward_icon_rainbow.png";
 
 class Login extends React.Component {
 
@@ -11,7 +12,7 @@ class Login extends React.Component {
         {
             //Create a new user object to fill
             console.log("User not logged in.")
-            this.state = {username:"", password:"", isAdmin: false };
+            this.state = {username:"", password:"", isAdmin:false, errorMessage: null};
         }
         else
         {
@@ -26,18 +27,19 @@ class Login extends React.Component {
       }
     render() {
       return (
-          <div id="login-menu">
+          <div id="generic-menu">
               <form onSubmit={this.handleSubmit}>
                 <label>
-                    <h1>Login</h1>
+                    <h1><img id='withward-logo' src={logo} alt="Withward Logo"></img>Login</h1>
                     Username:
                     <br/><input type="text" name="username" value={this.state.username} onChange={this.handleInputChange} />
                     <br/>Password:
                     <br/><input type="password" name="password" value={this.state.password} onChange={this.handleInputChange} />
-                    <br/><input type="checkbox" name="adminCheck" onChange={this.handleCheck} />
-                    <br/><input type="submit" className=".btn" value="Submit" />
+                    <br/>Admin: <input type="checkbox" name="adminCheck" onChange={this.handleCheck} />
+                    <br/><input type="submit" className="btn" value="Submit" />
                     <br/><br/>New User?
-                    <br/><button className=".btn" onClick={() =>{this.props.history.push("/register")}}>Register New Account</button>
+                    <br/><button className="btn" onClick={() =>{this.props.history.push("/register")}}>Register New Account</button>
+                    <br/><div className="error-mesage">{this.state.errorMessage}</div>
                 </label>
               </form>
           </div>
@@ -51,13 +53,13 @@ class Login extends React.Component {
         {
             urlString += "/admin";
         }
-        axios.post(urlString, {username: this.state.username, password: this.state.password})
+        axios.post(urlString, {username: this.state.username, password: this.state.password}, {withCredentials: true})
         .then (resp => 
         {
             //Route to User Landing Page
             console.log("Successful Login");
             console.log(resp);
-            sessionStorage.setItem("user", JSON.stringify({user: {username: this.state.username, password: this.state.password, isAdmin: false}}));
+            sessionStorage.setItem("user", JSON.stringify({user: {username: this.state.username, password: this.state.password, isAdmin: resp.data.includes("ADMIN")}}));
             // / = Profile Page
             this.props.history.push("/");
         })
@@ -65,6 +67,7 @@ class Login extends React.Component {
         {
             //Login Failed
             console.log("Incorrect Username or Password");
+            this.setState({errorMessage: "Incorrect Username or Password"})
             console.log(resp);
         });
     }

@@ -8,7 +8,7 @@ class AdminControl extends React.Component {
       }
     render() {
       return (
-          <div id="profile">
+          <div id="generic-menu">
               Username: {this.state.user.username}
               <br/>
                 Password: ******

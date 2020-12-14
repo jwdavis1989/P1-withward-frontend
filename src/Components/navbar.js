@@ -1,7 +1,7 @@
 
 import React from "react";
 import { NavLink } from "react-router-dom";
-import logo from "../Resources/Images/withward_icon.png";
+import logo from "../Resources/Images/withward_icon_rainbow.png";
 
 const NavBar = () => {
   return (
