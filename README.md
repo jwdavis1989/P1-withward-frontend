@@ -15,6 +15,15 @@ In the project directory, you can run:
 Runs the app in the development mode.
 Open a browser to begin using Withward.
 
+## Features
+1. Users may create new accounts.
+2. Users may login or logout successfully.
+3. Users may update their password.
+4. Users may view their Withlists.
+5. Admins may view all Users.
+6. Admin routes are protected.
+7. CSS Styling (Stretch Goal from Project Outline).
+
 ## Feature Walkthrough
 
 1. A user may begin by clicking Register New Account to be taken to the Register Account page.
