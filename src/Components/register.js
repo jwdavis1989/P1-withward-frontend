@@ -1,6 +1,7 @@
 import React from 'react';
 import { withRouter } from "react-router-dom";
 import axios from 'axios';
+import logo from "../Resources/Images/withward_icon_rainbow.png";
 
 class Register extends React.Component {
 
@@ -28,7 +29,7 @@ class Register extends React.Component {
           <div id="generic-menu">
               <form onSubmit={this.handleSubmit}>
                 <label>
-                    <h1>Register Account</h1>
+                    <h1><img id='withward-logo' src={logo} alt="Withward Logo"></img>Register Account</h1>
                     Username:
                     <br/><input type="text" name="username" value={this.state.username} onChange={this.handleInputChange} />
                     <br/>Password:
@@ -37,7 +38,7 @@ class Register extends React.Component {
                     <br/><input type="text" name="email" value={this.state.email} onChange={this.handleInputChange} />
                     <br/>Photo URL:
                     <br/><input type="text" name="photo" value={this.state.photo} onChange={this.handleInputChange} />
-                    <br/><input type="submit" value="Submit" />
+                    <br/><input type="submit" className="btn" value="Submit" />
                     <br/><div className="error-mesage">{this.state.errorMessage}</div>
                 
                 </label>

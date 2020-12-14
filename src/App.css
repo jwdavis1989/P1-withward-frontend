@@ -98,6 +98,35 @@ the margin or padding of inline elements directly, so we change a to a block typ
   -webkit-text-stroke: 1px black;
 }
 
+/* General Table Render */
+#generic-table {
+  text-align: left;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.6);
+  width: 25%;
+  margin-top: 3%;
+  margin-left: 10%;
+  padding: 50px;
+  border-radius: 20px;
+}
+
+#generic-table tr {
+  outline-style: outset;
+}
+
+#generic-table th, td {
+  padding-left: 1em;
+  padding-right:1em;
+  outline-style: outset;
+}
+/* Rainbow Table Header */
+#generic-menu h1 {
+  background-image: linear-gradient(to left, indigo, blue, green, yellow, orange, red);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1px black;
+}
+
 .error-mesage {
   color: red;
 }
