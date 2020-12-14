@@ -5,7 +5,7 @@ For thousands of years, humans have traveled together to survive. If you are fam
 
 The idea of withward means to travel with someone toward any destination. The withward app will help you stay organized in your real life quests by connecting you with other users, keeping track of your visited and to-be-visited destinations, and allow you and your companions to contribute their ratings to a visited place.
 
-# Getting Started with Create React App
+# Getting Started
 ## Available Scripts
 
 In the project directory, you can run:
